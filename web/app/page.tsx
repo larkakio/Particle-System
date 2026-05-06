@@ -4,7 +4,7 @@ import { ParticleGame } from "@/components/game/ParticleGame";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex h-dvh max-h-dvh max-w-lg flex-col overflow-hidden px-3 pb-3 pt-1">
+    <div className="mx-auto flex h-dvh max-h-dvh max-w-lg flex-col overflow-x-hidden px-3 pb-3 pt-1">
       <WalletBar />
       <main className="mt-3 flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain py-2">
         <div className="text-center">
