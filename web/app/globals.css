@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --neo-bg: #03050c;
+  --neo-fg: #e8fbff;
+  --neo-muted: #7a9aa3;
+  --neo-cyan: #00ffe5;
+  --neo-magenta: #ff2ec4;
+  --neo-lime: #b8ff3a;
+  --background: var(--neo-bg);
+  --foreground: var(--neo-fg);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: radial-gradient(ellipse 120% 80% at 50% -20%, #0a1a24 0%, var(--neo-bg) 45%);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  min-height: 100dvh;
+}
+
+.neo-border-b {
+  border-bottom: 1px solid rgba(0, 255, 229, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 255, 230, 0.04);
+}
+
+.neo-panel {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 229, 0.18);
+  background: linear-gradient(135deg, rgba(8, 20, 32, 0.92) 0%, rgba(4, 8, 18, 0.96) 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 46, 196, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.neo-btn {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 229, 0.35);
+  background: linear-gradient(180deg, rgba(0, 255, 229, 0.22) 0%, rgba(0, 120, 110, 0.35) 100%);
+  color: #041016;
+  text-shadow: 0 0 12px rgba(0, 255, 229, 0.5);
+  box-shadow:
+    0 0 20px rgba(0, 255, 229, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.neo-btn:hover:not(:disabled) {
+  border-color: rgba(184, 255, 58, 0.5);
+  box-shadow: 0 0 28px rgba(184, 255, 58, 0.2);
+}
+
+.neo-btn-ghost {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 46, 196, 0.25);
+  color: var(--neo-magenta);
+  background: rgba(20, 6, 24, 0.6);
+}
+
+.neo-wallet-row {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 229, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.neo-wallet-row:hover:not(:disabled) {
+  border-color: rgba(0, 255, 229, 0.35);
+  background: rgba(0, 40, 48, 0.35);
+}
+
+.neo-scanlines {
+  position: relative;
+}
+
+.neo-scanlines::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  mix-blend-mode: overlay;
+  border-radius: inherit;
+}
+
+@keyframes neo-grid-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}

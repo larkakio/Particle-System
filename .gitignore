@@ -1,0 +1,30 @@
+.DS_Store
+
+# Next.js (web/)
+web/node_modules/
+web/.next/
+web/out/
+web/build/
+web/.vercel/
+web/coverage/
+web/.pnp.*
+web/.yarn/*
+!web/.yarn/patches
+!web/.yarn/plugins
+!web/.yarn/releases
+web/npm-debug.log*
+web/yarn-debug.log*
+web/yarn-error.log*
+web/*.pem
+web/*.tsbuildinfo
+
+# Secrets (example file is tracked)
+web/.env
+web/.env.local
+web/.env.development.local
+web/.env.test.local
+web/.env.production.local
+
+# Foundry
+contracts/cache/
+contracts/out/
