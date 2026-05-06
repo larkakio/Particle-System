@@ -2,6 +2,8 @@
 
 Mobile-first **NeoPulse Field** mini-app: swipe particle game + **daily `checkIn()`** on Base mainnet with **ERC-8021 builder attribution** via `ox`. Vercel **Root Directory**: `web`.
 
+**Production:** [particle-system-henna.vercel.app](https://particle-system-henna.vercel.app)
+
 ## Layout
 
 | Path | Purpose |

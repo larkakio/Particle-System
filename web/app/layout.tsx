@@ -3,11 +3,14 @@ import { Orbitron, Space_Grotesk, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 
+const PRODUCTION_URL = "https://particle-system-henna.vercel.app";
+const DEFAULT_BASE_APP_ID = "69fae44e2763280abf41cd31";
+
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || PRODUCTION_URL;
 
 const baseAppId =
-  process.env.NEXT_PUBLIC_BASE_APP_ID?.trim() || "";
+  process.env.NEXT_PUBLIC_BASE_APP_ID?.trim() || DEFAULT_BASE_APP_ID;
 
 const orbitron = Orbitron({
   subsets: ["latin"],
